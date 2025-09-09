@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout - Jason Car Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7fa;
+        margin: 0;
+        padding: 0;
+      }
+      .checkout-container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(67, 206, 162, 0.1);
+        padding: 32px 24px;
+      }
+      .checkout-container h2 {
+        color: #185a9d;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .checkout-container label {
+        display: block;
+        margin-bottom: 6px;
+        color: #185a9d;
+        font-weight: 500;
+      }
+      .checkout-container input,
+      .checkout-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+      .checkout-container button {
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.2s;
+      }
+      .checkout-container button:hover {
+        background: #185a9d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <button type="submit">Place Order</button>
+      </form>
+      <div
+        id="order-success"
+        style="
+          display: none;
+          color: green;
+          text-align: center;
+          margin-top: 20px;
+        "
+      >
+        Thank you for your order! We will contact you soon.
+      </div>
+    </div>
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS (replace 'YOUR_USER_ID' with your actual user ID from EmailJS dashboard)
+      (function () {
+        emailjs.init("YOUR_USER_ID"); // TODO: Replace with your EmailJS User ID
+      })();
+
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const address = document.getElementById("address").value;
+          const phone = document.getElementById("phone").value;
+          // Prepare email params
+          const templateParams = {
+            name: name,
+            email: email,
+            address: address,
+            phone: phone,
+          };
+          // Send email via EmailJS
+          emailjs
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+            .then(
+              function (response) {
+                document.getElementById("order-success").style.display =
+                  "block";
+                alert(
+                  `Order Placed!\n\nName: ${name}\nEmail: ${email}\nAddress: ${address}\nPhone: ${phone}\n\nThank you for shopping with Jason Car Shop!`
+                );
+              },
+              function (error) {
+                alert("Order failed to send. Please try again.");
+              }
+            );
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Products - J Fashion Design Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+        padding: 16px 32px;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 2px 12px rgba(24, 90, 157, 0.08);
+      }
+
+      .main-header img {
+        height: 80px;
+        width: auto;
+        border-radius: 12px;
+        background: #fff;
+        padding: 4px;
+      }
+
+      .main-header .center-title {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .main-header .right-info {
+        text-align: right;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        background: #fff;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 2px 8px rgba(24, 90, 157, 0.06);
+        margin-bottom: 24px;
+        padding: 12px 0;
+      }
+
+      .navbar a {
+        color: #185a9d;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 18px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .navbar a.active,
+      .navbar a:hover {
+        background: #43cea2;
+        color: #fff;
+      }
+
+      .products-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin: 32px 0;
+      }
+
+      .product-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(67, 206, 162, 0.1);
+        width: 220px;
+        padding: 18px 12px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+
+      .product-card:hover {
+        box-shadow: 0 8px 32px rgba(24, 90, 157, 0.18);
+        transform: translateY(-6px) scale(1.03);
+      }
+
+      .product-card img {
+        border-radius: 12px;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .product-card .product-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        color: #185a9d;
+      }
+
+      .product-card .product-price {
+        color: #43cea2;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      .product-card button {
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .product-card button:hover {
+        background: #185a9d;
+      }
+
+      .footer {
+        background: #185a9d;
+        color: #fff;
+        padding: 32px 0 16px 0;
+        margin-top: 48px;
+        border-radius: 18px 18px 0 0;
+        text-align: center;
+      }
+
+      .footer .socials {
+        margin: 12px 0;
+      }
+
+      .footer .socials a {
+        color: #43cea2;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+
+      .footer .socials a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 900px) {
+        .main-header,
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .products-section {
+          gap: 16px;
+        }
+
+        .footer {
+          padding: 16px 0 0 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="main-header">
+      <a href="index.html">
+        <img src="image/logo.jpg" alt="Logo" />
+      </a>
+      <div class="center-title">Jason Car Shop</div>
+      <div class="header-info">
+        <p><b>Monday - Friday</b></p>
+        <p>8:00 AM - 9:00 PM</p>
+      </div>
+      <div class="header-info">
+        <a
+          href="https://wa.me/+2349019117202"
+          target="_blank"
+          style="color: #fff; text-decoration: none"
+          >Support 24/7: +2349158495953</a
+        >
+      </div>
+      <div class="cart-icon">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-badge" class="badge">0</span>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Product.html" class="active">Other Products</a>
+      <a href="client.html">Our Clients</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+   <!--Main Content -->
+		<div class="products-section">
+      <!-- BEST MUSICS -->
+          <div class="product-card">
+              <a href="details 1.html">
+              <a href="details 3.html">
+                <img src="image/car 11.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Toyota</div>
+            <div class="product-price"> $75,0000 </div>
+            <button
+              class="add-to-cart"
+                     data-product="Johnatan"
+                     data-image="images/clothes_13.jpg"
+              data-price="75000"
+            > Add to Cart </button> 
+          </div>
+          <div class="product-card">
+              <a href="details3.html"> 
+              <img src="image/car 2.jpg" alt="Product Image" /> </a>
+            <div class="product-title">BMW</div>
+            <div class="product-price"> $45,000 </div>
+            <button
+              class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_5.jpg"
+              data-price="45000"
+            > Add to Cart </button> 
+          </div>
+          <div class="product-card">
+              <a href="details4.html">
+              <img src="image/car 12.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Mercedes Benz</div>
+            <div class="product-price"> $35,500 </div>
+            <button
+              class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_16.jpg"
+              data-price="45000"
+            > Add to Cart </button>  
+          </div>
+          <div class="product-card">
+              <a href="details13.html">
+              <img src="image/car 13.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Ferrari</div>
+            <div class="product-price"> $20,000 </div>
+            <button
+                  class="add-to-cart"
+                     data-product="Johnatan "
+                     data-image="images/clothes_14.jpg"
+              data-price="25000"
+            > Add to Cart </button>
+          </div>
+          <div class="product-card">
+              <a href="details7.html">
+              <img src="image/car 14.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Volkswagen</div>
+            <div class="product-price"> $30,000 </div>
+            <button
+                  class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_17.jpg"
+              data-price="30000"
+            > Add to Cart </button>
+          </div>
+          <div class="product-card">
+              <a href="details14.html">
+              <img src="image/car 8.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Lambugini</div>
+            <div class="product-price"> $100,000 </div>
+            <button
+                  class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_10.jpg"
+              data-price="10000"
+            > Add to Cart </button>	
+          </div>
+          <div class="product-card">
+              <a href="details18.html">
+              <img src="image/car 16.jpg" alt="Product Image" /> </a>
+            <div class="product-title"> Ford</div>
+            <div class="product-price"> $30,000 </div>
+            <button
+                  class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_15.jpg"
+              data-price="30000"
+            > Add to Cart </button>
+          </div>
+          <div class="product-card">
+              <a href="details15.html">
+              <img src="image/car 17.jpg" alt="Product Image" /> </a>
+            <div class="product-title">Land Crusier</div>
+            <div class="product-price"> $25,000 </div>
+            <button
+                  class="add-to-cart"
+                     data-product="Johnatan Style"
+                     data-image="images/clothes_8.jpg"
+              data-price="25000"
+            > Add to Cart </button>
+          </div>				
+          </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <img
+          src="image/logo.jpg"
+          alt="Logo"
+          style="height: 80px; border-radius: 8px"
+        />
+      </div>
+      <div class="socials">
+        <a href="https://wa.me/+2349019117202" target="_blank" title="Whatsapp"
+          ><i class="fa fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/justabwoi/profilecard/?igsh=dTd0anQyYXQ1azV5"
+          target="_blank"
+          title="Instagram"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+      <div style="margin: 12px 0">
+        <b>Quick Links:</b>
+        <a href="index.html" style="color: #43cea2">Home</a> |
+        <a href="about.html" style="color: #43cea2">About</a> |
+        <a href="client.html" style="color: #43cea2">Clients</a> |
+        <a href="faqs.html" style="color: #43cea2">FAQ</a> |
+        <a href="T&C's.html" style="color: #43cea2">T&C's</a>
+      </div>
+      <div style="margin-top: 16px">
+        <h4>Sign-Up</h4>
+        <h5>Subscribe to our mailing list & get 5% off your first order</h5>
+        <input
+          type="text"
+          name="item"
+          id="item"
+          size="20"
+          placeholder="E-mail Address"
+          style="padding: 8px; border-radius: 6px; border: none"
+        />
+        <input
+          type="button"
+          value="Subscribe"
+          style="
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            background: #43cea2;
+            color: #fff;
+            margin-left: 8px;
+          "
+        />
+      </div>
+      <div style="font-size: small; padding: 10px">
+        J FASHION DESIGN CENTER - &copy; 2024. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

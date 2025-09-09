@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Product Details - J Fashion Design Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7fa;
+        margin: 0;
+        padding: 0;
+      }
+      .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+        padding: 16px 32px;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 2px 12px rgba(24, 90, 157, 0.08);
+      }
+      .main-header img {
+        height: 80px;
+        width: auto;
+        border-radius: 12px;
+        background: #fff;
+        padding: 4px;
+      }
+      .main-header .center-title {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .main-header .right-info {
+        text-align: right;
+        color: #fff;
+        font-size: 1rem;
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        background: #fff;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 2px 8px rgba(24, 90, 157, 0.06);
+        margin-bottom: 24px;
+        padding: 12px 0;
+      }
+      .navbar a {
+        color: #185a9d;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 18px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .navbar a.active,
+      .navbar a:hover {
+        background: #43cea2;
+        color: #fff;
+      }
+      .details-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 48px;
+        margin: 48px 0;
+        flex-wrap: wrap;
+      }
+      .details-image {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(67, 206, 162, 0.1);
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .details-image img {
+        border-radius: 12px;
+        width: 220px;
+        height: 750px;
+        object-fit: cover;
+      }
+      .details-info {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(24, 90, 157, 0.1);
+        padding: 32px 28px;
+        max-width: 400px;
+        min-width: 280px;
+      }
+      .details-info h2 {
+        color: #185a9d;
+        margin-bottom: 8px;
+      }
+      .details-info h3 {
+        color: #43cea2;
+        margin-bottom: 8px;
+      }
+      .details-info p {
+        color: #444;
+        margin-bottom: 16px;
+      }
+      .details-info .product-price {
+        color: #43cea2;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 18px;
+      }
+      .details-info button {
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 28px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .details-info button:hover {
+        background: #185a9d;
+      }
+      .footer {
+        background: #185a9d;
+        color: #fff;
+        padding: 32px 0 16px 0;
+        margin-top: 48px;
+        border-radius: 18px 18px 0 0;
+        text-align: center;
+      }
+      .footer .socials {
+        margin: 12px 0;
+      }
+      .footer .socials a {
+        color: #43cea2;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+      .footer .socials a:hover {
+        color: #fff;
+      }
+      @media (max-width: 900px) {
+        .main-header,
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .details-section {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+        .footer {
+          padding: 16px 0 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="main-header">
+      <img src="image/logo.jpg" alt="Logo" />
+      <div class="center-title">Jason Car Shop</div>
+      <div class="right-info">
+        <div><b>Mon - Fri:</b> 8:00 AM - 9:00 PM</div>
+        <div>
+          <b>Support 24/7:</b>
+          <a
+            href="https://wa.me/+2349158495953"
+            style="color: #fff; text-decoration: underline"
+            >+2349158495953</a
+          >
+        </div>
+        <div>
+          My cart: <i class="fa fa-shopping-cart"></i>
+          <span id="cart-badge">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Product.html">Other Products</a>
+      <a href="client.html">Our Clients</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- Product Details Section -->
+    <div class="details-section">
+      <div class="details-image">
+        <img src="image/BMW.jpg" alt="BMW" style="border-radius:12px;width:750px;height:400px;object-fit:cover;border:6px solid #185a9d;box-shadow:0 6px 32px rgba(24,90,157,0.18),0 1.5px 8px rgba(67,206,162,0.10);background:#fff;" />
+      </div>
+      <div class="details-info">
+        <h2>BMW</h2>
+        <h3>Product Information</h3>
+        <p>
+          BMW cars are known for their luxury, performance, and advanced engineering. With a reputation for sporty handling and innovative technology, BMW offers a range of vehicles from elegant sedans to powerful SUVs. Each BMW is crafted to deliver a dynamic driving experience, combining comfort, safety, and style for drivers who demand the best.
+        </p>
+        <h3>Popular Uses: Executive travel, family comfort, long-distance journeys, and driving enthusiasts.</h3>
+        <div class="product-price">$45,000.00</div>
+        <button
+          class="add-to-cart"
+          data-product="Johnatan Style"
+          data-image="images/clothes_17.jpg"
+          data-price="30000"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <img
+          src="image/logo.jpg"
+          alt="Logo"
+          style="height: 80px; border-radius: 8px"
+        />
+      </div>
+      <div class="socials">
+        <a href="https://wa.me/+2349158495953" target="_blank" title="Whatsapp"
+          ><i class="fa fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/justabwoi/profilecard/?igsh=dTd0anQyYXQ1azV5"
+          target="_blank"
+          title="Instagram"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+      <div style="margin: 12px 0">
+        <b>Quick Links:</b>
+        <a href="index.html" style="color: #43cea2">Home</a> |
+        <a href="about.html" style="color: #43cea2">About</a> |
+        <a href="client.html" style="color: #43cea2">Clients</a> |
+        <a href="faqs.html" style="color: #43cea2">FAQ</a> |
+        <a href="T&C's.html" style="color: #43cea2">T&C's</a>
+      </div>
+      <div style="margin-top: 16px">
+        <h4>Sign-Up</h4>
+        <h5>Subscribe to our mailing list & get 5% off your first order</h5>
+        <input
+          type="text"
+          name="item"
+          id="item"
+          size="20"
+          placeholder="E-mail Address"
+          style="padding: 8px; border-radius: 6px; border: none"
+        />
+        <input
+          type="button"
+          value="Subscribe"
+          style="
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            background: #43cea2;
+            color: #fff;
+            margin-left: 8px;
+          "
+        />
+      </div>
+      <div style="font-size: small; padding: 10px">
+        J FASHION DESIGN CENTER - &copy; 2024. All rights reserved.
+      </div>
+    </footer>
+    <script src="Cart.js"></script>
+  </body>
+</html>

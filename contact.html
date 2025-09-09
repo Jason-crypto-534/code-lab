@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jason Car Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+        padding: 16px 32px;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 2px 12px rgba(24, 90, 157, 0.08);
+      }
+
+      .main-header img {
+        height: 80px;
+        width: auto;
+        border-radius: 12px;
+        background: #fff;
+        padding: 4px;
+      }
+
+      .main-header .center-title {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .main-header .right-info {
+        text-align: right;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        background: #fff;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 2px 8px rgba(24, 90, 157, 0.06);
+        margin-bottom: 24px;
+        padding: 12px 0;
+      }
+
+      .navbar a {
+        color: #185a9d;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 18px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .navbar a.active,
+      .navbar a:hover {
+        background: #43cea2;
+        color: #fff;
+      }
+
+      .contact-section {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(67, 206, 162, 0.1);
+        margin: 32px auto;
+        max-width: 700px;
+        padding: 32px;
+      }
+
+      .contact-section h2 {
+        color: #185a9d;
+        margin-bottom: 16px;
+      }
+
+      .contact-section p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      .contact-form button {
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .contact-form button:hover {
+        background: #185a9d;
+      }
+
+      .footer {
+        background: #185a9d;
+        color: #fff;
+        padding: 32px 0 16px 0;
+        margin-top: 48px;
+        border-radius: 18px 18px 0 0;
+        text-align: center;
+      }
+
+      .footer .socials {
+        margin: 12px 0;
+      }
+
+      .footer .socials a {
+        color: #43cea2;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+
+      .footer .socials a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 800px) {
+        .contact-section {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="main-header">
+      <a href="index.html">
+        <img src="image/logo.jpg" alt="Logo" />
+      </a>
+      <div class="center-title">Jason Car Shop</div>
+      <div class="header-info">
+        <p><b>Monday - Friday</b></p>
+        <p>8:00 AM - 9:00 PM</p>
+      </div>
+      <div class="header-info">
+        <a
+          href="https://wa.me/+2349019117202"
+          target="_blank"
+          style="color: #fff; text-decoration: none"
+          >Support 24/7: +2349158495953</a
+        >
+      </div>
+      <div class="cart-icon">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-badge" class="badge">0</span>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Product.html">Other Products</a>
+      <a href="client.html">Our Clients</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>
+        Have a question or want to place an order? Fill out the form below or
+        reach us directly at:
+      </p>
+      <p><b>Phone:</b> 09158495953, 08035396759, 08029592927</p>
+      <p><b>Email:</b> info@jasonitz091.com</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <img
+          src="image/logo.jpg"
+          alt="Logo"
+          style="height: 80px; border-radius: 8px"
+        />
+      </div>
+      <div class="socials">
+        <a href="https://wa.me/+2349019117202" target="_blank" title="Whatsapp"
+          ><i class="fa fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/justabwoi/profilecard/?igsh=dTd0anQyYXQ1azV5"
+          target="_blank"
+          title="Instagram"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+      <div>
+        <p>&copy; 2023 JASON CAR SHOP. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

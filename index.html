@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Jason Car Shop</title>
+      <meta
+        name="description"
+        content="Discover a wide range of unique and high-quality gifts at NETH GIFT STORE. From perfumes to toys, we have something for everyone. Shop now and enjoy amazing deals!"
+      />
+      <meta
+        name="keywords"
+        content="Nethanel, Neth gift store, gift store, online shopping, perfumes, toys, PS5, teddy bears, gel ball blaster, gifts for him, gifts for her, NETH GIFT STORE"
+      />
+      <meta name="author" content="NETH GIFT STORE" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        property="og:title"
+        content="NETH GIFT STORE - Your One-Stop Gift Shop"
+      />
+      <meta
+        property="og:description"
+        content="Shop for unique and high-quality gifts at NETH GIFT STORE. Explore our collection of perfumes, toys, and more. Perfect for every occasion!"
+      />
+      <meta property="og:image" content="images/logo.png" />
+      <meta property="og:url" content="https://j fashion design center.com" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="NETH GIFT STORE - Your One-Fashion Design Shop"
+      />
+      <meta
+        name="twitter:description"
+        content="Find the perfect clothes at J. Feshion Design Center. From luxury Johnatan to Senator wear, we have it all. Shop now!"
+      />
+      <meta name="twitter:image" content="images/logo.png" />
+    </head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/soc fotter.css" />
+    <link rel="icon" href="images/logo.gif" type="image/x-icon" />
+    <link rel="icon" href="image/logo.jpg" type="image/x-icon" />
+    <style>
+      /* Modernized layout using divs and Flexbox */
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7fa;
+        margin: 0;
+        padding: 0;
+      }
+      .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+        padding: 16px 32px;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 2px 12px rgba(24, 90, 157, 0.08);
+      }
+      .main-header img {
+        height: 80px;
+        width: auto;
+        border-radius: 12px;
+        background: #fff;
+        padding: 4px;
+      }
+      .main-header .center-title {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2.2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .main-header .header-info {
+        color: #fff;
+        font-size: 1rem;
+        margin-left: 32px;
+      }
+      .main-header .cart-icon {
+        background: #fff;
+        border-radius: 50%;
+        padding: 10px 16px;
+        color: #185a9d;
+        font-size: 1.5rem;
+        box-shadow: 0 2px 8px rgba(67, 206, 162, 0.1);
+        margin-left: 24px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(24, 90, 157, 0.08);
+        border-radius: 12px;
+        margin: 24px 32px 0 32px;
+        padding: 0.5rem 0;
+      }
+      .navbar a {
+        color: #185a9d;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin: 0 18px;
+        padding: 8px 18px;
+        border-radius: 8px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .navbar a.active,
+      .navbar a:hover {
+        background: #43cea2;
+        color: #fff;
+      }
+      .marquee {
+        background: #185a9d;
+        color: #fff;
+        border-radius: 8px;
+        margin: 24px auto;
+        padding: 10px 0;
+        width: 60%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      .products-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin: 32px 0;
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(67, 206, 162, 0.1);
+        width: 220px;
+        padding: 18px 12px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .product-card:hover {
+        box-shadow: 0 8px 32px rgba(24, 90, 157, 0.18);
+        transform: translateY(-6px) scale(1.03);
+      }
+      .product-card img {
+        border-radius: 12px;
+        width: 200px;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+      .product-card .product-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        color: #185a9d;
+      }
+      .product-card .product-price {
+        color: #43cea2;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      .product-card button {
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .product-card button:hover {
+        background: #185a9d;
+      }
+      .footer {
+        background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+        color: #fff;
+        border-radius: 18px 18px 0 0;
+        margin-top: 48px;
+        padding: 32px 0 0 0;
+        box-shadow: 0 -2px 12px rgba(24, 90, 157, 0.08);
+      }
+      .footer h4 {
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: underline;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+      .footer input[type="text"] {
+        border-radius: 8px;
+        border: none;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+      }
+      .footer input[type="button"] {
+        border-radius: 8px;
+        background: #43cea2;
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .footer input[type="button"]:hover {
+        background: #185a9d;
+      }
+      @media (max-width: 900px) {
+        .main-header,
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .products-section {
+          gap: 16px;
+        }
+        .footer {
+          padding: 16px 0 0 0;
+        }
+      }
+      .products-section .product-card:first-child {
+        align-self: flex-start;
+        margin-left: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="# ">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <script src=" " async defer></script>
+    <!-- top nav bar-->
+    <div class="main-header">
+      <a href="index.html">
+        <img src="image/logo.jpg" alt="Logo" />
+      </a>
+      <div class="center-title">Jason Car Shop</div>
+      <div class="header-info">
+        <p><b>Monday - Friday</b></p>
+        <p>8:00 AM - 9:00 PM</p>
+      </div>
+      <div class="header-info">
+        <a
+          href="https://wa.me/+2349019117202"
+          target="_blank"
+          style="color: #fff; text-decoration: none"
+        >
+          Support 24/7: +2349158495953
+        </a>
+      </div>
+      <div class="cart-icon">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-badge" class="badge">0</span>
+      </div>
+    </div>
+    <div class="navbar">
+      <a class="active" href="index.html"> Home</a>
+      <a class="active" href="Product.html">Our Brand Products</a>
+      <a class="active" href="client.html">Our Clients</a>
+      <a class="active" href="About.html">About us</a>
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+    <div class="marquee">
+      Welcome to Jason Car Shop 50% Discount In Any Car your buy!!!
+    </div>
+    <!-- Products Section: All product cards in a single responsive row -->
+    <div class="products-section">
+      <div class="product-card">
+          <img src="image/image 7.jpg" alt="Product 1" />
+        </a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 8.jpg" alt="Product 2" /></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 9.jpg" alt="Product 3" /></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 10.jpg" alt="Product 4" /></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 11.jpg" alt="Product 5" /></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 12.jpg" alt="Product 6" /></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="image/image 13.jpg" alt="Product 7" /></a>
+      </div>
+    </div>
+
+    
+    
+    
+    
+    	  <!-- footer Message -->
+        <div class="footer">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="image/logo.jpg" alt="Logo" />
+            </div>
+            <div class="footer-follow">
+              <h4>Follow us</h4>
+              <a href="https://wa.me/+2349158495953" target="_blank">Whatsapp</a>
+              <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+              <a
+                href="https://www.instagram.com/justabwoi/profilecard/?igsh=dTd0anQyYXQ1azV5"
+                target="_blank"
+                >Instagram</a
+              >
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a class="active" href="index.html"> Home</a>
+              <a class="active" href="About.html"> About</a>
+              <a class="active" href="client.html"> Our clients</a>
+              <a class="active" href="faqs.html"> FAQ</a>
+              <a class="active" href="T&C's.html"> T&C's</a>
+            </div>
+            <div class="footer-signup">
+              <h4>Sign-Up</h4>
+              <h5>Subscribe to our mailing list & get 5% off your first order</h5>
+              <input
+                class="f"
+                type="text"
+                name="item"
+                id="item"
+                size="15"
+                placeholder="E-mail Address"
+              />
+              <input class="ff" type="button" value="Subscribe" />
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>JASON CAR SHOP - &copy; 2024. All right reserved.</p>
+          </div>
+        </div>
+    
+        <script src="Cart.js"></script>
+      </body>
+    </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="footer">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div style="flex: 1 1 300px; margin-right: 32px;">
+            <h4>About Us</h4>
+            <p>
+              We are a leading car dealership offering a wide range of vehicles to
+              suit every need. Our commitment is to provide quality cars and
+              exceptional service.
+            </p>
+            <a href="About.html" style="color: #fff; text-decoration: underline"
+              >Learn more</a
+            >
+          </div>
+          <div style="flex: 1 1 300px; margin-right: 32px;">
+            <h4>Contact Us</h4>
+            <p>
+              Have questions? Reach out to us!
+            </p>
+            <p>
+              <i class="fa fa-map-marker"></i> 123 Car Shop St, Auto City, AC 12345
+            </p>
+            <p>
+              <i class="fa fa-phone"></i> <a href="tel:+2349019117202" style="color: #fff;">+2349019117202</a>
+            </p>
+            <p>
+              <i class="fa fa-envelope"></i> <a href="mailto:support@jasoncarshop.com" style="color: #fff;">support@jasoncarshop.com</a>
+            </p>
+          </div>
+          <div style="flex: 1 1 300px;">
+            <h4>Follow Us</h4>
+            <p>Stay connected through our social media channels:</p>
+            <div style="display: flex; gap: 12px;">
+              <a href="#" style="color: #fff;">
+                <i class="fa fa-facebook-official"></i>
+              </a>
+              <a href="#" style="color: #fff;">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#" style="color: #fff;">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="#" style="color: #fff;">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 16px; padding-top: 16px; text-align: center;">
+          <p style="font-size: 0.9rem;">
+            &copy; 2023 Jason Car Shop. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
